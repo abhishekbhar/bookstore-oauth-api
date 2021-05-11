@@ -1,8 +1,8 @@
 package db
 
 import (
-	"github.com/abhishekbhar/bookstore-oauth-api/src/domain/access_token"
-	"github.com/abhishekbhar/bookstore-oauth-api/src/utils/errors"
+	"github.com/abhishekbhar/bookstore-oauth-api/domain/access_token"
+	"github.com/abhishekbhar/bookstore-oauth-api/utils/errors"
 )
 
 

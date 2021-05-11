@@ -1,9 +1,9 @@
 package app
 
 import (
-	"github.com/abhishekbhar/bookstore-oauth-api/src/domain/access_token"
-	"github.com/abhishekbhar/bookstore-oauth-api/src/repository/db"
-	"github.com/abhishekbhar/bookstore-oauth-api/src/http"
+	"github.com/abhishekbhar/bookstore-oauth-api/domain/access_token"
+	"github.com/abhishekbhar/bookstore-oauth-api/repository/db"
+	"github.com/abhishekbhar/bookstore-oauth-api/http"
 	"github.com/gin-gonic/gin"
 )
 

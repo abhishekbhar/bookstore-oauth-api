@@ -1,7 +1,7 @@
 package access_token
 
 import (
-	"github.com/abhishekbhar/bookstore-oauth-api/src/utils/errors"
+	"github.com/abhishekbhar/bookstore-oauth-api/utils/errors"
 )
 
 type Repository interface{

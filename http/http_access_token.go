@@ -4,7 +4,7 @@ import (
 	"strings"
 	"net/http"
 	"github.com/gin-gonic/gin"
-	"github.com/abhishekbhar/bookstore-oauth-api/src/domain/access_token"
+	"github.com/abhishekbhar/bookstore-oauth-api/domain/access_token"
 	// "github.com/abhishekbhar/bookstore-oauth-api/src/utils/errors"	
 )
 
