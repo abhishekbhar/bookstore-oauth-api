@@ -13,7 +13,7 @@ var (
 
 func init() {
 	//connect to cassandra cluster
-	cluster := gocql.NewCluster("172.20.0.3")
+	cluster := gocql.NewCluster("172.20.0.4")
 	cluster.Keyspace 	= "oauth"
 	cluster.Consistency = gocql.Quorum
 	var err error

@@ -4,7 +4,7 @@ import (
 	"time"
 	"fmt"
 	"strings"
-	"github.com/abhishekbhar/bookstore-oauth-api/utils/errors"
+	"github.com/abhishekbhar/bookstore-utils-go/rest_errors"
 	"github.com/abhishekbhar/bookstore-oauth-api/utils/crypto_utils"
 )
 
@@ -29,7 +29,7 @@ type AccessTokenRequest struct {
 }
 
 
-func (atr *AccessTokenRequest) Validate() *errors.RestErr {
+func (atr *AccessTokenRequest) Validate() *rest_errors.RestErr {
 
 	switch atr.GrantType {
 	case grantTypePassword:
@@ -37,7 +37,7 @@ func (atr *AccessTokenRequest) Validate() *errors.RestErr {
 	case grantTypeClientCredentials:
 		break
 	default:
-		return errors.NewBadRequestError("invalid grant_type parameter")
+		return rest_errors.NewBadRequestError("invalid grant_type parameter")
 	}
 
 	//Validate parameters for each grant_type
@@ -69,19 +69,19 @@ func (at AccessToken) IsExpired() bool {
 }
 
 
-func (at *AccessToken) Validate() *errors.RestErr{
+func (at *AccessToken) Validate() *rest_errors.RestErr{
 	at.AccessToken = strings.TrimSpace(at.AccessToken)
 	if at.AccessToken == "" {
-		return errors.NewBadRequestError("invalid access token id")
+		return rest_errors.NewBadRequestError("invalid access token id")
 	}
 	if at.UserId <= 0 {
-		return errors.NewBadRequestError("invalid user id")
+		return rest_errors.NewBadRequestError("invalid user id")
 	}
 	if at.ClientId <= 0 {
-		return errors.NewBadRequestError("invalid client id")
+		return rest_errors.NewBadRequestError("invalid client id")
 	}
 	if at.Expires <= 0 {
-		return errors.NewBadRequestError("invalid expiration time")
+		return rest_errors.NewBadRequestError("invalid expiration time")
 	}
 	return nil
 
